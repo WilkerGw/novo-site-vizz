@@ -1,0 +1,33 @@
+.main__endereco, .endereco__infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.endereco__infos {
+    box-shadow: 0px 0px 10px #2e2e2e;
+    padding: 1rem 3rem;
+    margin-bottom: 1rem;
+}
+
+.endereco__infos p a {
+    color: var(--amarelo-principal);
+}
+
+.endereco__infos p > span {
+    font-weight: bold;   
+    color: var(--amarelo-principal); 
+}
+
+.endereco__icone {
+    width: 2rem;
+}
+
+.main__endereco > iframe {
+    width: 70%;
+    height: 15rem;
+    box-shadow: 0px 0px 10px #2e2e2e;
+}
+

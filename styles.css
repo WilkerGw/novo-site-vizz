@@ -1,0 +1,164 @@
+
+:root{
+  --cinza-principal:#2e2e2e;
+  --amarelo-principal:#ffdd56;
+}
+/* Resetando estilo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(/img/banners/fundo-escuro.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Imagem fixa ao rolar a página */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #eeeeee;
+  transition: .5s;
+}
+
+.btn__modo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  margin-top: 3rem;
+
+}
+
+.trilho {
+  width: 2rem;
+  height: 1rem;
+  background-color: #6e6e6e;
+  position: absolute;
+  border-radius: 9.375rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px #eeeeee;
+  top: 0;
+  right: 0;
+}
+
+.trilho .indicador {
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  border-radius: 9.375rem;
+  transform: scale(.9);
+  position: absolute;
+  left: 0;
+  transition: .5s;
+}
+
+.trilho.light{
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #2e2e2e;
+}
+
+.trilho.light .indicador{
+  left: 1rem;
+  background-color: #2e2e2e;
+}
+
+.body.light {
+  background-image: url(/img/banners/fundo-claro.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Imagem fixa ao rolar a página */
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-image: url(/img/banners/fundo-escuro.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Imagem fixa ao rolar a página */
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.header.light {
+  background-image: url(/img/banners/fundo-claro.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Imagem fixa ao rolar a página */
+}
+
+.header__menu-item {
+  color: #eeeeee;
+}
+
+.header__menu-item.light {
+  color: #2e2e2e;
+}
+
+.header__menu-item:hover a.light {
+  background-color: #eeeeee;
+}
+
+
+section {
+  height: 100vh;
+  font-weight: 100;
+}
+
+section h1, section h2 {
+  font-weight: 100;  
+}
+
+/* MAIN */
+.main {
+  width: 100%;
+  overflow: hidden;
+}
+
+.main__pop-up {
+  display: none;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .header__menu {
+      flex-direction: column;
+  }
+
+  .header__menu-item {
+      margin: 10px 0;
+  }
+
+  .header__submenu {
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__logo img {
+      max-width: 120px;
+  }
+}

@@ -1,0 +1,36 @@
+.main__horario{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.horario__infos,
+.horario__video {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.horario__video {
+    box-shadow: 0px 0px 10px #2e2e2e;
+    height: auto;
+}
+
+.horario__infos{
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 0px 10px #2e2e2e;
+    padding: 1rem 7rem;
+}
+
+.horario__infos p {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 80%;
+}
+
+.horario__infos p > span {
+    font-weight: bold;
+    opacity: 100%;
+}

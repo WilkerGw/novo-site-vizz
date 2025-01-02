@@ -1,0 +1,126 @@
+.main__designe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.designe__title {
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    text-align: center;
+}
+
+.designe__cta {
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    text-align: center;
+}
+
+.designe__infos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0px 0px 10px #2e2e2e;
+    padding: 1rem;
+}
+
+.designe__item {
+    position: relative;
+}
+
+.designe__image {
+    width: 5rem;
+    transition: all .5s;
+    cursor: pointer;
+    filter: grayscale(100%);
+    border-radius: 0.3rem;
+}
+
+.designe__image:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
+
+.designe__list {
+    background-color: #2e2e2e;
+    position: absolute;
+    width: 30rem;
+    z-index: 1000;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.designe__item:hover .designe__list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.designe__list-title {
+    font-size: 1.1rem;
+}
+
+.designe__list-item {
+    color: #ffffff;
+    opacity: 100%;
+}
+
+.designe__list-item:hover {
+    transform: scale(1);
+    color: var(--cor-fundo);
+}
+
+.designe__list-item--label {
+    font-weight: bold;
+}
+
+.designe__image-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+    text-align: center;
+    width: 30%;
+}
+
+.designe__image-item {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.designe__image-item--img {
+    width: 4rem;
+    margin-inline: 2rem;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    opacity: 80%;
+    border-radius: 50%;
+    background-color: #eeeeee1e;
+    box-shadow: 0px 0px 10px #2e2e2e;
+}
+
+.designe__image-item--img:hover {
+    transform: scale(1.1);
+    opacity: 100%;
+}
+
+.designe__image-item--text {
+    font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+    .designe__image-item--img {
+        width: 5rem;
+        margin: 0;
+    }
+
+    .designe__image-container {
+        gap: 2rem;
+    }
+}

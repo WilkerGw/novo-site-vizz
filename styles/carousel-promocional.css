@@ -1,0 +1,74 @@
+.main__carousel-promocional {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+  
+  .main__carousel-promocional h1 {
+    font-size: 1rem;
+  }
+   
+  .carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+    
+  .carousel-track {
+    display: flex;
+    width: calc(1080px * 6); /* 3 imagens originais + 3 clones */
+    animation: scroll 50s linear infinite;
+  }
+
+  .carousel__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+    
+  .carousel-track img {
+    width: 55rem;
+    object-fit: cover;
+    border-radius: .3rem;
+  }
+  
+  .mobi, .desk {
+  }
+    
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-3240px); /* Move 3 imagens para a esquerda */
+    }
+    }
+    
+    .mobi {
+      display: none;
+    }
+  
+    /*RESPONSIVO PARA MOBILE*/
+  
+  @media (max-width: 600px) {
+  
+    .main__carousel-promocional{
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .desk{
+      display: none;
+    }
+    .mobi {
+      display: flex;
+    }
+  
+    .carousel-track img {
+      width: 5%;
+    }
+  
+  }
