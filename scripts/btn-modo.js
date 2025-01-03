@@ -14,14 +14,16 @@ let headerFundo = document.querySelector('.header');
 let headerListaItem = document.querySelectorAll('.header__menu-item a');
 let headerSubMenu = document.querySelectorAll('.header__submenu');
 let headerLogo = document.querySelector('.header__logo-img')
+let btnCloseMenuCor = document.querySelector('.close-menu');
+let btnOpenMenuCor = document.querySelector('.menu-toggle');
+let fundoMenu = document.querySelector('.menu');
 
 // Adiciona um evento de clique ao elemento 'trilho' para alternar o modo claro e escuro.
 trilho.addEventListener('click', () => {
     // Alterna a classe 'light' no elemento 'trilho' (indica o estado atual do modo).
     trilho.classList.toggle('light');
-
     headerFundo.classList.toggle('light');
-
+    fundoMenu.classList.toggle('light');
     // Alterna a classe 'light' no elemento 'body' (altera o tema geral da página).
     body.classList.toggle('light');
 
@@ -45,7 +47,6 @@ trilho.addEventListener('click', () => {
             contatoIconeWhats.src = 'img/icones/whats-cinza.png';
             contatoIconeFace.src = 'img/icones/face-cinza.png';
             headerLogo.src = 'img/logos/LOGO-OFICIAL-CINZA.png';
-            
         } else {
             // Remove a cor inline, voltando ao estilo padrão definido no CSS.
             titulo.style.color = '';
@@ -60,7 +61,6 @@ trilho.addEventListener('click', () => {
             contatoIconeWhats.src = 'img/icones/whatsapp.png';
             contatoIconeFace.src = 'img/icones/facebook.png';
             headerLogo.src = 'img/logos/LOGO-OFICIAL-DOURADA.png';
-            
         }
     });
 
@@ -94,20 +94,37 @@ trilho.addEventListener('click', () => {
         }
     });
 
+    // Modifica a cor do botão 'btnCloseMenuCor' para o modo claro ou escuro
+    if (trilho.classList.contains('light')) {
+        // Modo claro: cor #7e7e7e
+        btnCloseMenuCor.style.color = '#7e7e7e';
+        btnOpenMenuCor.style.color = '#7e7e7e';
+    } else {
+        // Modo escuro: cor #ffdd56
+        btnCloseMenuCor.style.color = '#ffdd56';
+        btnOpenMenuCor.style.color = '#ffdd56';
+    }
+
+    // Altera o fundo dos submenus do header
     headerSubMenu.forEach(itemSubLista => {
-        // Alterna a classe 'light' em cada parágrafo.
         itemSubLista.classList.toggle('light');
 
-        // Verifica se o parágrafo está no modo 'light'.
         if (itemSubLista.classList.contains('light')) {
-            // Define a cor do parágrafo no modo claro.
-            itemSubLista.style.backgroundColor = '#eeeeee';
+            itemSubLista.style.backgroundColor = '#e9e8e2';
         } else {
-            // Remove a cor inline, voltando ao estilo padrão definido no CSS.
-            itemSubLista.style.backgroundColor = '#444';
-            //#444
+            itemSubLista.style.backgroundColor = '#545251';
         }
     });
 
-    //headerSubMenu
+    headerSubMenu.forEach(itemSubLista => {
+        itemSubLista.classList.toggle('light');
+
+        if (itemSubLista.classList.contains('light')) {
+            itemSubLista.style.backgroundColor = '#eeeeee';
+        } else {
+            itemSubLista.style.backgroundColor = '#444';
+        }
+    });
+
+    
 });

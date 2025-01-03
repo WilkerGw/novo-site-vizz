@@ -58,9 +58,10 @@
       width: 100%;
       margin: 0;
       padding: 0;
+      height: auto;
     }
   
-    .desk{
+    .desk, .p__desk{
       display: none;
     }
     .mobi {
@@ -68,7 +69,12 @@
     }
   
     .carousel-track img {
-      width: 5%;
+      width: 100%;
+    }
+
+    .carousel__item {
+      display: flex;
+      flex-direction: column;
     }
   
   }

@@ -14,28 +14,30 @@
     <link rel="stylesheet" href="styles/endereco.css">
     <link rel="stylesheet" href="styles/contato.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <script src="script.js" defer></script>
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/carousel-produtos.js" defer></script>
     <script src="scripts/btn-modo.js" defer></script>
-    <script src="scripts/elementos.js" defer></script>
-    <script src="scripts/hover-img.js" defer></script>
+    <script src="scripts/meta-tag.js" defer></script>
 </head>
 <body class="body">
     <header class="header">
         <div class="header__logo">
-            <img src="img/logos/LOGO-OFICIAL-DOURADA.png" alt="Logo" class="header__logo-img" />
+          <img src="img/logos/LOGO-OFICIAL-DOURADA.png" alt="Logo" class="header__logo-img" />
         </div>
-        <nav class="header__nav">
+        <!-- Botão Hamburguer -->
+        <button id="menu-toggle" class="menu-toggle">☰</button>
+        <!-- Menu deslizante -->
+        <nav id="menu" class="menu">
+            <button id="close-menu" class="close-menu">✖</button>
             <ul class="header__menu">
                 <li class="header__menu-item"><a href="#main__banner-principal">Início</a></li>
                 <li class="header__menu-item header__menu-item--dropdown">
                     <a href="https://oticasvizz.lojavirtualnuvem.com.br/oculos-de-sol/" target="_blank">Óculos Solar</a>
                     <ul class="header__submenu">
-                        <li><a href="https://oticasvizz.lojavirtualnuvem.com.br/oculos-de-sol/" target="_blank">Todos</a></li>
-                        <li><a href="https://oticasvizz.lojavirtualnuvem.com.br/oculos-de-sol/quadrados/" target="_blank">Quadrados</a></li>
-                        <li><a href="https://oticasvizz.lojavirtualnuvem.com.br/oculos-de-sol/arredondados/" target="_blank">Redondos</a></li>
-                        <li><a href="https://oticasvizz.lojavirtualnuvem.com.br/oculos-de-sol/gatinho/" target="_blank">Gatinho</a></li>
+                        <li class="header__submenu-item"><a href="https://oticasvizz.lojavirtualnuvem.com.br/oculos-de-sol/" target="_blank">Todos</a></li>
+                        <li class="header__submenu-item"><a href="https://oticasvizz.lojavirtualnuvem.com.br/oculos-de-sol/quadrados/" target="_blank">Quadrados</a></li>
+                        <li class="header__submenu-item"><a href="https://oticasvizz.lojavirtualnuvem.com.br/oculos-de-sol/arredondados/" target="_blank">Redondos</a></li>
+                        <li class="header__submenu-item"><a href="https://oticasvizz.lojavirtualnuvem.com.br/oculos-de-sol/gatinho/" target="_blank">Gatinho</a></li>
                     </ul>
                 </li>
                 <li class="header__menu-item header__menu-item--dropdown">
@@ -59,7 +61,7 @@
                     </ul>
                 </li>
             </ul>
-        </nav>
+        </nav> 
     </header>
     <main class="main">
         <section class="main__banner-principal" id="main__banner-principal">
@@ -95,15 +97,15 @@
                 <div class="carousel-track">
                     <div class="carousel__item">
                         <img src="img/banners/banner atual/p01.png" alt="Imagem 1 desk" class="desk">
-                        <p>Válida para lentes de até dois graus simples e armações tradicionais.</p>
+                        <p class="p__desk">Válida para lentes de até dois graus simples e armações tradicionais.</p>
                     </div>
                     <div class="carousel__item">
                         <img src="img/banners/banner atual/p02.png" alt="Imagem 2 desk" class="desk">
-                        <p>Não acumulativa com outras promoções.</p>
+                        <p class="p__desk">Não acumulativa com outras promoções.</p>
                     </div>
                     <div class="carousel__item">
                         <img src="img/banners/banner atual/p03.png" alt="Imagem 3 desk" class="desk">
-                        <p>Armações tradicionais.</p>
+                        <p class="p__desk">Armações tradicionais.</p>
                     </div>
                     <div class="carousel__item">
                         <img src="img/banners/banner atual/p04.png" alt="Imagem 4 mobi" class="mobi">
@@ -119,15 +121,15 @@
                     </div>
                     <div class="carousel__item">
                         <img src="img/banners/banner atual/p01.png" alt="Imagem 1 Clone desk" class="desk">
-                        <p>Válida para lentes de até dois graus simples e armações tradicionais.</p>
+                        <p class="p__desk">Válida para lentes de até dois graus simples e armações tradicionais.</p>
                     </div>
                     <div class="carousel__item">
                         <img src="img/banners/banner atual/p02.png" alt="Imagem 2 Clone desk" class="desk">
-                        <p>Não acumulativa com outras promoções.</p>
+                        <p class="p__desk">Não acumulativa com outras promoções.</p>
                     </div>
                     <div class="carousel__item">
                         <img src="img/banners/banner atual/p03.png" alt="Imagem 3 Clone desk" class="desk">
-                        <p>Armações tradicionais.</p>
+                        <p class="p__desk">Armações tradicionais.</p>
                     </div>
                     <div class="carousel__item">
                         <img src="img/banners/banner atual/p04.png" alt="Imagem 4 Clone mobi" class="mobi">
@@ -208,61 +210,61 @@
                 <button class="carousel-button right" onclick="scrollCarousel(1, 300)">&#10095;</button>
                 <div class="carousel-container" id="carousel1">
                   <div class="carousel-item">
-                    <img src="img/destaque/SOL/Acácia/01.png" alt="Image 1">
+                    <a href="https://oticasvizz.lojavirtualnuvem.com.br/produtos/vizz-acacia-animal-print/" target="_blank"><img src="img/destaque/SOL/Acácia/01.png" alt="Image 1"></a>
                     <h1>Óculos de Sol com proteção <span>UV400</span> Vizz Acácia</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/SOL/Havana/01.png" alt="Image 2">
+                    <a href="https://oticasvizz.lojavirtualnuvem.com.br/produtos/vizz-havana-animal-print/" target="_blank"><img src="img/destaque/SOL/Havana/01.png" alt="Image 2"></a>
                     <h1>Óculos de Sol com proteção <span>UV400</span> Vizz Havana</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/SOL/Rio/01.jpg" alt="Image 2">
+                    <a href="https://oticasvizz.lojavirtualnuvem.com.br/produtos/oculos-de-sol-com-protecao-uv400-vizz-rio-animal-print/" target="_blank"><img src="img/destaque/SOL/Rio/01.jpg" alt="Image 2"></a>
                     <h1>Óculos de Sol com proteção <span>UV400</span> Vizz Rio</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/SOL/Manhattan/01.png" alt="Image 2">
+                    <a href="https://oticasvizz.lojavirtualnuvem.com.br/produtos/vizz-manhattan-preto/" target="_blank"><img src="img/destaque/SOL/Manhattan/01.png" alt="Image 2"></a>
                     <h1>Óculos de Sol com proteção <span>UV400</span> Vizz Manhattan</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/SOL/Rio/01.jpg" alt="Image 2">
+                    <a href="https://oticasvizz.lojavirtualnuvem.com.br/produtos/vizz-rio-preto/" target="_blank"><img src="img/destaque/SOL/Rio/01.jpg" alt="Image 2"></a>
                     <h1>Óculos de Sol com proteção <span>UV400</span> Vizz Rio</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/SOL/Monroe Gatinho/01.png" alt="Image 2">
+                    <a href="https://oticasvizz.lojavirtualnuvem.com.br/produtos/vizz-monroe-gatinho-preto/" target="_blank"><img src="img/destaque/SOL/Monroe Gatinho/01.png" alt="Image 2"></a>
                     <h1>Óculos de Sol com proteção <span>UV400</span> Vizz Monroe Gatinho</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/SOL/Gamma/01.png" alt="Image 2">
+                    <a href="https://oticasvizz.lojavirtualnuvem.com.br/produtos/vizz-gamma-preto/" target="_blank"><img src="img/destaque/SOL/Gamma/01.png" alt="Image 2"></a>
                     <h1>Óculos de Sol com proteção <span>UV400</span> Vizz Gamma</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/SOL/Beta/01.png" alt="Image 2">
+                    <a href="https://oticasvizz.lojavirtualnuvem.com.br/produtos/vizz-beta-preto/" target="_blank"><img src="img/destaque/SOL/Beta/01.png" alt="Image 2"></a>
                     <h1>Óculos de Sol com proteção <span>UV400</span> Vizz Beta</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/SOL/BoldSquare/01.png" alt="Image 2">
+                    <a href="https://oticasvizz.lojavirtualnuvem.com.br/produtos/vizz-boldsquare-branco/" target="_blank"><img src="img/destaque/SOL/BoldSquare/01.png" alt="Image 2"></a>
                     <h1>Óculos de Sol com proteção <span>UV400</span> Vizz BoldSquare</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/SOL/Gamma/01.png" alt="Image 2">
+                    <a href="https://oticasvizz.lojavirtualnuvem.com.br/produtos/vizz-gamma-animal-print/" target="_blank"><img src="img/destaque/SOL/Gamma/01.png" alt="Image 2"></a>
                     <h1>Óculos de Sol com proteção <span>UV400</span> Vizz Gamma</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
@@ -274,61 +276,61 @@
                 <button class="carousel-button right" onclick="scrollCarousel(2, 300)">&#10095;</button>
                 <div class="carousel-container" id="carousel2">
                   <div class="carousel-item">
-                    <img src="img/destaque/GRAU/ACTIVE/active01.jpg" alt="Image 1">
+                    <a href=""><img src="img/destaque/GRAU/ACTIVE/active01.jpg" alt="Image 1"></a>
                     <h1>Armação para Grau Vizz Active</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/GRAU/REGENCY2/01.png" alt="Image 2">
+                    <a href="https://oticasvizz.lojavirtualnuvem.com.br/produtos/armacao-para-lentes-de-grau-vizz-regency-preto/" target="_blank"><img src="img/destaque/GRAU/REGENCY2/01.png" alt="Image 2"></a>
                     <h1>Armação para Grau Vizz Regency</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/GRAU/SFERA/01.png" alt="Image 2">
+                    <a href=""><img src="img/destaque/GRAU/SFERA/01.png" alt="Image 2"></a>
                     <h1>Armação para Grau Vizz Sfera</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/GRAU/MIKONOS/01.png" alt="Image 2">
+                    <a href="https://oticasvizz.lojavirtualnuvem.com.br/produtos/armacao-para-lentes-de-grau-vizz-mikonos-bege/" target="_blank"><img src="img/destaque/GRAU/MIKONOS/01.png" alt="Image 2"></a>
                     <h1>Armação para Grau Vizz Mikonos</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/GRAU/GLACIER/glacier01.jpg" alt="Image 2">
+                    <a href=""><img src="img/destaque/GRAU/GLACIER/glacier01.jpg" alt="Image 2"></a>
                     <h1>Armação para Grau Vizz Glacier</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/GRAU/SPENGLER/1p.png" alt="Image 2">
+                    <a href=""><img src="img/destaque/GRAU/SPENGLER/1p.png" alt="Image 2"></a>
                     <h1>Armação para Grau Vizz Spengler</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/GRAU/PARKER/01.png" alt="Image 2">
+                    <a href="https://oticasvizz.lojavirtualnuvem.com.br/produtos/armacao-para-lentes-de-grau-vizz-parker-dourado/" target="_blank"><img src="img/destaque/GRAU/PARKER/01.png" alt="Image 2"></a>
                     <h1>Armação para Grau Vizz Parker</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/GRAU/ASPEN/01.png" alt="Image 2">
+                    <a href="https://oticasvizz.lojavirtualnuvem.com.br/produtos/armacao-para-lentes-de-grau-vizz-aspen/" target="_blank"><img src="img/destaque/GRAU/ASPEN/01.png" alt="Image 2"></a>
                     <h1>Armação para Grau Vizz Aspen</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/GRAU/ROONEY/1p.png" alt="Image 2">
+                    <a href=""><img src="img/destaque/GRAU/ROONEY/1p.png" alt="Image 2"></a>
                     <h1>Armação para Grau Vizz Viena</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/destaque/GRAU/ETHEREAL/ethereal01.jpg" alt="Image 2">
+                    <a href=""><img src="img/destaque/GRAU/ETHEREAL/ethereal01.jpg" alt="Image 2"></a>
                     <h1>Armação para Grau Vizz Ethereal</h1>
                     <p class="preco__antigo">R$ 129,99</p>
                     <p class="preco__promo">R$ 99,99</p>
@@ -336,6 +338,7 @@
                 </div>
             </article>
         </section>
+        
         <section class="main__horario">
             <div class="horario__infos">
                 <h1>Horário de Funcionamento</h1>
@@ -358,7 +361,6 @@
 
         <section class="main__endereco" id="main__endereco">
             <article class="endereco__infos">
-                <img src="img/icones/mapa.png" alt="" class="endereco__icone">
                 <p>Avenida do Oratório, 4869, Vila Industrial, São Paulo - SP</p>
                 <p>Estamos à <span>200 metros</span> da estação <span><a href="https://maps.app.goo.gl/RDHVWyMvsrASqB5U8" target="_blank">Vila Tolstói</a>.</span> <br> São apenas <span>4 minutos</span> de caminhada.</p>
             </article>

@@ -1,28 +1,32 @@
-const menuIcon = document.querySelector('.header__icone__menu');
-const closeIcon = document.querySelector('.header__icone__fechar');
-const mainMenu = document.querySelector('.header__menu__principal');
-const header = document.querySelector('header');
-const logoHeader = document.querySelector ('.header__logo')
+// Seleciona os elementos necessários
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+const closeMenuButton = document.getElementById('close-menu');
+const menuItems = document.querySelectorAll('.menu-item');
 
-menuIcon.addEventListener('click', () => {
-  mainMenu.style.display = 'flex';
-  closeIcon.style.display = 'flex';
-  menuIcon.style.display = 'none';
-  logoHeader.style.display = 'none'
-});
+// Função para abrir o menu
+function openMenu() {
+  menu.classList.add('open');
+}
 
-closeIcon.addEventListener('click', () => {
-  mainMenu.style.display = 'none';
-  closeIcon.style.display = 'none';
-  menuIcon.style.display = 'flex';
-  logoHeader.style.display = 'flex'
+// Função para fechar o menu
+function closeMenu() {
+  menu.classList.remove('open');
+}
 
-});
-
-header.addEventListener('click', (event) => {
-  if (!event.target.closest('.header__menu__principal') && !event.target.closest('.header__icone__menu')) {
-    mainMenu.style.display = 'none';
-    closeIcon.style.display = 'none';
-    menuIcon.style.display = 'flex';
+// Fecha o menu ao clicar fora dele
+function closeMenuOnClickOutside(event) {
+  if (!menu.contains(event.target) && event.target !== menuToggle) {
+    closeMenu();
   }
+}
+
+// Adiciona os eventos
+menuToggle.addEventListener('click', openMenu);
+closeMenuButton.addEventListener('click', closeMenu);
+document.addEventListener('click', closeMenuOnClickOutside);
+
+// Fecha o menu ao clicar em um item
+menuItems.forEach(item => {
+  item.addEventListener('click', closeMenu);
 });

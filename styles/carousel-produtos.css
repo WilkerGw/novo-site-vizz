@@ -98,5 +98,20 @@
   }
   
   @media (max-width:600px) {
-    
+
+  .carousel__produtos__destaque {
+    height: auto;
+  }
+
+  .carousel-item{
+    width: 100%;
+    padding: 0;
+
+  }
+
+  .carousel-item img {
+    width: 75%;
+  }
+
+
   }

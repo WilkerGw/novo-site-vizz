@@ -34,3 +34,25 @@
     font-weight: bold;
     opacity: 100%;
 }
+
+@media (max-width:600px){
+
+    .main__horario {
+        flex-direction: column;
+        box-shadow: none;
+    }
+
+    .horario__infos, .horario__video {
+        padding: 0;
+    }
+
+    .horario__video{
+        width: 100%;
+    }
+
+    .horario__infos {
+        width: 90%;
+        padding: 1rem;
+    }
+
+}

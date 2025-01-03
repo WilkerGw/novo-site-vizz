@@ -103,18 +103,27 @@ body {
   background-attachment: fixed; /* Imagem fixa ao rolar a página */
 }
 
+
+
+.menu-toggle.light{
+  color: #7e7e7e;
+}
+
+.close-menu.light{
+  color: #7e7e7e;
+}
+
 .header__menu-item {
   color: #eeeeee;
 }
 
 .header__menu-item.light {
-  color: #2e2e2e;
+  color: #7e7e7e;
 }
 
 .header__menu-item:hover a.light {
   background-color: #eeeeee;
 }
-
 
 section {
   height: 100vh;
@@ -143,7 +152,7 @@ section h1, section h2 {
 }
 
 /* RESPONSIVO */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .header__menu {
       flex-direction: column;
   }
@@ -155,10 +164,13 @@ section h1, section h2 {
   .header__submenu {
       width: 100%;
   }
+
+ 
 }
 
-@media (max-width: 480px) {
-  .header__logo img {
-      max-width: 120px;
+@media(min-width:700px){
+  section{
+    height: auto;
   }
 }
+
