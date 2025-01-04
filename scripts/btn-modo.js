@@ -17,6 +17,7 @@ let headerLogo = document.querySelector('.header__logo-img')
 let btnCloseMenuCor = document.querySelector('.close-menu');
 let btnOpenMenuCor = document.querySelector('.menu-toggle');
 let fundoMenu = document.querySelector('.menu');
+let imgDesign = document.querySelectorAll('.designe__image');
 
 // Adiciona um evento de clique ao elemento 'trilho' para alternar o modo claro e escuro.
 trilho.addEventListener('click', () => {
@@ -123,6 +124,16 @@ trilho.addEventListener('click', () => {
             itemSubLista.style.backgroundColor = '#eeeeee';
         } else {
             itemSubLista.style.backgroundColor = '#444';
+        }
+    });
+
+    imgDesign.forEach(imgDesi => {
+        imgDesi.classList.toggle('light');
+
+        if (imgDesi.classList.contains('light')) {
+            imgDesi.style.boxShadow = '#eeeeee';
+        } else {
+            imgDesi.style.boxShadow = '#2e2e2e';
         }
     });
 
