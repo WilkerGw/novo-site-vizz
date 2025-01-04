@@ -31,10 +31,10 @@
   .carousel-track img {
     width: 55rem;
     object-fit: cover;
-    border-radius: .3rem;
   }
-  
-  .mobi, .desk {
+
+  .p__mobi {
+    display: none;
   }
     
   @keyframes scroll {
@@ -61,11 +61,13 @@
       height: auto;
     }
   
-    .desk, .p__desk{
-      display: none;
-    }
     .mobi {
       display: flex;
+      width: 100%;
+    }
+
+    .p__mobi {
+      display: none;
     }
   
     .carousel-track img {
@@ -75,6 +77,20 @@
     .carousel__item {
       display: flex;
       flex-direction: column;
+    }
+
+    .desk, .p__desk{
+      display: none;
+    }
+
+    .carousel-track {
+      width: 
+      200rem;
+    }
+
+    .carousel-track img {
+      width: 100%;
+      object-fit: cover;
     }
   
   }

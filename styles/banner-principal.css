@@ -57,6 +57,12 @@
 
 @media (max-width: 600px) {
 
+    .main__banner-principal{
+        height: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
     .endereco__container {
       width: 100%;
       padding-inline: 1rem;
@@ -68,7 +74,7 @@
 
     #address {
       width: 100%;
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
 }
 

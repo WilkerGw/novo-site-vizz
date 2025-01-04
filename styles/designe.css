@@ -17,6 +17,7 @@
     font-size: 1rem;
     letter-spacing: .1rem;
     text-align: center;
+    margin-block: 1rem;
 }
 
 .designe__infos {
@@ -78,10 +79,6 @@
     opacity: 100%;
 }
 
-.designe__list-item{
-    
-}
-
 .designe__list-item {
     color: #ffffff;
     opacity: 100%;
@@ -134,28 +131,36 @@
 
     .main__designe{
         align-items: center;
+        gap: 1rem;
+        height: auto;
+        margin-block: 3rem;
     }
-
+    
     .designe__image-container {
         width: 100%;
     }
-
+    
     .designe__image-item--img {
         width: 5rem;
         margin: 0;
     }
-
-    .designe__image-container {
-        gap: 2rem;
-    }
-
+    
+    
     .designe__item {
-        width: 100%;
+        width: 40%;
         position: static;
+        margin-inline: 0;  
     }
 
+    .designe__image{
+        width: 10rem;
+    }
+    
     .designe__infos {
+        flex-direction: row;
+        flex-wrap: wrap;
         position: relative;
+        gap: 2rem;
     }
 
     .designe__list {
