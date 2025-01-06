@@ -17,7 +17,7 @@
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/carousel-produtos.js" defer></script>
     <script src="scripts/btn-modo.js" defer></script>
-    <script src="scripts/meta-tag.js" defer></script>
+    <script src="scripts/carousel-promo.js"defer></script>
 </head>
 <body class="body">
     <header class="header">
@@ -25,12 +25,12 @@
           <img src="img/logos/LOGO-OFICIAL-DOURADA.png" alt="Logo" class="header__logo-img" />
         </div>
         <!-- Botão Hamburguer -->
-        <button id="menu-toggle" class="menu-toggle">☰</button>
+        <button id="menu-toggle" class="menu-toggle"><p>Menu</p>☵</button>
         <!-- Menu deslizante -->
         <nav id="menu" class="menu">
             <button id="close-menu" class="close-menu">✖</button>
             <ul class="header__menu">
-                <li class="header__menu-item"><a href="#main__banner-principal">Início</a></li>
+                <li class="header__menu-item"><a href="#banner">Início</a></li>
                 <li class="header__menu-item header__menu-item--dropdown">
                     <a href="https://oticasvizz.lojavirtualnuvem.com.br/oculos-de-sol/" target="_blank">Óculos Solar</a>
                     <ul class="header__submenu">
@@ -66,6 +66,59 @@
         </nav> 
     </header>
     <main class="main">
+        <section class="banner-container" id="banner">
+            <div class="overlay"></div>
+            <div class="carousel-container">
+              <div class="carousel-slide desktop-version active" style="background-image: url('./img/banners/banner/1.png');"></div>
+              <div class="carousel-slide mobile-version" style="background-image: url('./img/banners/banner/mobile/1.png');"></div>
+
+              <div class="carousel-slide desktop-version" style="background-image: url('./img/banners/banner/2.png');"></div>
+              <div class="carousel-slide mobile-version" style="background-image: url('./img/banners/banner/mobile/2.png');"></div>
+
+              <div class="carousel-slide desktop-version" style="background-image: url('./img/banners/banner/3.png');"></div>
+              <div class="carousel-slide mobile-version" style="background-image: url('./img/banners/banner/mobile/3.png');"></div>
+
+              <div class="carousel-slide desktop-version" style="background-image: url('./img/banners/banner/4.png');"></div>
+              <div class="carousel-slide mobile-version" style="background-image: url('./img/banners/banner/mobile/4.png');"></div>
+
+              <div class="carousel-slide desktop-version" style="background-image: url('./img/banners/banner/5.png');"></div>
+              <div class="carousel-slide mobile-version" style="background-image: url('./img/banners/banner/mobile/5.png');"></div>
+
+              <div class="carousel-slide desktop-version" style="background-image: url('./img/banners/banner/6.png');"></div>
+              <div class="carousel-slide mobile-version" style="background-image: url('./img/banners/banner/mobile/6.png');"></div>
+
+              <div class="carousel-slide desktop-version" style="background-image: url('./img/banners/banner/7.png');"></div>
+              <div class="carousel-slide mobile-version" style="background-image: url('./img/banners/banner/mobile/7.png');"></div>
+
+              <div class="carousel-slide desktop-version" style="background-image: url('./img/banners/banner/8.png');"></div>
+              <div class="carousel-slide mobile-version" style="background-image: url('./img/banners/banner/mobile/8.png');"></div>
+
+              <div class="carousel-slide desktop-version" style="background-image: url('./img/banners/banner/9.png');"></div>
+              <div class="carousel-slide mobile-version" style="background-image: url('./img/banners/banner/mobile/9.png');"></div>
+
+              <div class="carousel-slide desktop-version" style="background-image: url('./img/banners/banner/10.png');"></div>
+              <div class="carousel-slide mobile-version" style="background-image: url('./img/banners/banner/mobile/10.png');"></div>
+
+              <div class="carousel-slide desktop-version" style="background-image: url('./img/banners/banner/11.png');"></div>
+              <div class="carousel-slide mobile-version" style="background-image: url('./img/banners/banner/mobile/11.png');"></div>
+
+              <div class="carousel-slide desktop-version" style="background-image: url('./img/banners/banner/12.png');"></div>
+              <div class="carousel-slide mobile-version" style="background-image: url('./img/banners/banner/mobile/12.png');"></div>
+
+              <div class="carousel-slide desktop-version" style="background-image: url('./img/banners/banner/13.png');"></div>
+              <div class="carousel-slide mobile-version" style="background-image: url('./img/banners/banner/mobile/13.png');"></div>
+
+              <div class="carousel-slide desktop-version" style="background-image: url('./img/banners/banner/14.png');"></div> 
+              <div class="carousel-slide mobile-version" style="background-image: url('./img/banners/banner/mobile/14.png');"></div> 
+
+            </div>
+            <div class="btn__modo">
+                <div class="trilho">
+                    <div class="indicador"></div>
+                </div>
+            </div>
+        </section>
+
         <section class="main__banner-principal" id="main__banner-principal">
           <div class="banner__logo-container">
               <img src="img/logos/LOGO-OFICIAL-DOURADA.png" alt="Logo da marca Vizz" class="banner__logo">
@@ -82,103 +135,11 @@
                   <img src="img/icones/facebook.png" alt="Facebook" class="banner__redes-icone face-light">
               </a>
           </article>
-          <section class="banner__endereco">
-            <p class="endereco__texto " id="address">
-                Av do Oratório, 4869, Vila Industrial, São Paulo - SP
-            </p>
-        </section>
-        <div class="btn__modo">
-            <div class="trilho">
-                <div class="indicador"></div>
-            </div>
-        </div>
-        </section>
-
-        <section class="main__carousel-promocional">
-            <div class="carousel">
-                <div class="carousel-track">
-                    <div class="carousel__item">
-                        <img src="img/banners/banner atual/p01.png" alt="Imagem 1 desk" class="desk">
-                        <p class="p__desk">Não acumulativa com outras promoções.</p>                    
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/banners/banner atual/p02.png" alt="Imagem 2 desk" class="desk">
-                        <p class="p__desk">Válida para lentes de até dois graus simples e armações tradicionais.</p>
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/banners/banner atual/p03.png" alt="Imagem 3 desk" class="desk">
-                        <p class="p__desk">Armações tradicionais.</p>
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/banners/banner atual/P04.png" alt="Imagem 3 desk" class="desk">
-                        <p class="p__desk">Traga sua receita e faça um orçamento!</p>
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/banners/banner atual/P05.png" alt="Imagem 3 desk" class="desk">
-                        <p class="p__desk">Proteção e resistência para o seu pequeno.</p>
-                    </div>
-                    <div class="carousel__item .mobi">
-                        <img src="img/banners/banner atual/m01.png" alt="Imagem 4 mobi" class="mobi">
-                        <p class="p__mobi">Não acumulativa com outras promoções.</p>
-                    </div>
-                    <div class="carousel__item .mobi">
-                        <img src="img/banners/banner atual/m02.png" alt="Imagem 5 mobi" class="mobi">
-                        <p class="p__mobi">Válida para lentes de até dois graus simples e armações tradicionais.</p>
-                    </div>
-                    <div class="carousel__item .mobi">
-                        <img src="img/banners/banner atual/m03.png" alt="Imagem 6 mobi" class="mobi">
-                        <p class="p__mobi">Armações tradicionais.</p>
-                    </div>
-                    <div class="carousel__item .mobi">
-                        <img src="img/banners/banner atual/m04.png" alt="Imagem 1 Clone desk" class="mobi">
-                        <p class="p__mobi">Traga sua receita e faça um orçamento!</p>
-                    </div>
-                    <div class="carousel__item .mobi">
-                        <img src="img/banners/banner atual/m05.png" alt="Imagem 2 Clone desk" class="mobi">
-                        <p class="p__mobi">Proteção e resistência para o seu pequeno.</p>
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/banners/banner atual/P01.png" alt="Imagem 3 Clone desk" class="desk">
-                        <p class="p__desk">Não acumulativa com outras promoções.</p>
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/banners/banner atual/P02.png" alt="Imagem 4 Clone mobi" class="desk">
-                        <p class="p__desk">Válida para lentes de até dois graus simples e armações tradicionais.</p>
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/banners/banner atual/P03.png" alt="Imagem 5 Clone mobi" class="desk">
-                        <p class="p__desk">Armações tradicionais.</p>
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/banners/banner atual/P04.png" alt="Imagem 6 Cone mobi" class="desk">
-                        <p class="p__desk">Traga sua receita e faça um orçamento!</p>
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/banners/banner atual/P05.png" alt="Imagem 6 Cone mobi" class="desk">
-                        <p class="p__desk">Proteção e resistência para o seu pequeno.</p>
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/banners/banner atual/m01.png" alt="Imagem 3 Clone desk" class="mobi">
-                        <p class="p__mobi">Não acumulativa com outras promoções.</p>
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/banners/banner atual/m02.png" alt="Imagem 4 Clone mobi" class="mobi">
-                        <p class="p__mobi">Válida para lentes de até dois graus simples e armações tradicionais.</p>
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/banners/banner atual/m03.png" alt="Imagem 5 Clone mobi" class="mobi">
-                        <p class="p__mobi">Armações tradicionais.</p>
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/banners/banner atual/m04.png" alt="Imagem 6 Cone mobi" class="mobi">
-                        <p class="p__mobi">Traga sua receita e faça um orçamento!</p>
-                    </div>
-                    <div class="carousel__item">
-                        <img src="img/banners/banner atual/m05.png" alt="Imagem 6 Cone mobi" class="mobi">
-                        <p class="p__mobi">Proteção e resistência para o seu pequeno.</p>
-                    </div>
-                </div>
-              </div>
+            <section class="banner__endereco">
+                <p class="endereco__texto " id="address">
+                    Av do Oratório, 4869, Vila Industrial, São Paulo - SP
+                </p>
+            </section>
         </section>
 
         <section class="main__designe" id="main__designe">

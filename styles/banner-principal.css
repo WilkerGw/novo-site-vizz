@@ -2,12 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
     color: var(--amarelo-principal);
     opacity: 80%;
-    position: relative;
-    height: 50vh;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 200px;
+    right: 400px;
+    z-index: 100;
   }
 
 .banner__logo {
@@ -55,14 +58,28 @@
     50% { border-color: transparent; }
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a0; /* Preto com 50% de transparência */
+    pointer-events: none; /* Permite interação apenas com o conteúdo abaixo */
+    z-index: 1; /* Garante que a sobreposição fique acima do conteúdo */
+  }
+
+  .overlay.light {
+    background-color: #ffffff75; /* Preto com 50% de transparência */
+  }
+
 @media (max-width: 600px) {
 
     .main__banner-principal{
-        height: auto;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        top: 100px;
+        right: 0;
+        overflow: hidden;
     }
-
     .endereco__container {
       width: 100%;
       padding-inline: 1rem;

@@ -1,96 +1,67 @@
-.main__carousel-promocional {
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease, filter 1s ease;
+  filter: blur(10px);
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.slide-light  {
+  display: none;
+}
+
+.mobile-version {
+  display: none;
+}
+
+.desktop-version {
+  display: flex;
+}
+
+
+@media (max-width: 600px) {
+
+  .carousel-container{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-  }
-  
-  .main__carousel-promocional h1 {
-    font-size: 1rem;
-  }
-   
-  .carousel {
     width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-    
-  .carousel-track {
-    display: flex;
-    width: calc(1080px * 6); /* 3 imagens originais + 3 clones */
-    animation: scroll 50s linear infinite;
+    justify-content: end;
   }
 
-  .carousel__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-    
-  .carousel-track img {
-    width: 55rem;
-    object-fit: cover;
+  .banner-container{
+    width: 100%;
   }
 
-  .p__mobi {
+  .mobile-version{
+    display: flex;
+  }
+
+  .carousel-slide{
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 120px;
+  }
+
+  .desktop-version{
     display: none;
   }
-    
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-3240px); /* Move 3 imagens para a esquerda */
-    }
-    }
-    
-    .mobi {
-      display: none;
-    }
-  
-    /*RESPONSIVO PARA MOBILE*/
-  
-  @media (max-width: 600px) {
-  
-    .main__carousel-promocional{
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      height: auto;
-    }
-  
-    .mobi {
-      display: flex;
-      width: 100%;
-    }
+}
 
-    .p__mobi {
-      display: none;
-    }
-  
-    .carousel-track img {
-      width: 100%;
-    }
-
-    .carousel__item {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .desk, .p__desk{
-      display: none;
-    }
-
-    .carousel-track {
-      width: 
-      200rem;
-    }
-
-    .carousel-track img {
-      width: 100%;
-      object-fit: cover;
-    }
-  
-  }

@@ -105,6 +105,12 @@
   padding: 50px;
 }
 
+.menu-toggle p{
+  text-transform: lowercase;
+  width: 100%;
+  font-size: .7rem;
+}
+
   /* Versão para dispositivos móveis */
 @media (max-width: 767px) {
   /* Estilos específicos para telas menores que 768px */

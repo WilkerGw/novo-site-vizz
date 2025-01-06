@@ -18,6 +18,8 @@ let btnCloseMenuCor = document.querySelector('.close-menu');
 let btnOpenMenuCor = document.querySelector('.menu-toggle');
 let fundoMenu = document.querySelector('.menu');
 let imgDesign = document.querySelectorAll('.designe__image');
+let principal = document.querySelector('.main__banner-principal');
+let overLay = document.querySelector('.overlay');
 
 // Adiciona um evento de clique ao elemento 'trilho' para alternar o modo claro e escuro.
 trilho.addEventListener('click', () => {
@@ -27,6 +29,8 @@ trilho.addEventListener('click', () => {
     fundoMenu.classList.toggle('light');
     // Alterna a classe 'light' no elemento 'body' (altera o tema geral da página).
     body.classList.toggle('light');
+    overLay.classList.toggle('light');
+    
 
     // Itera sobre todos os títulos (<h1>) dentro do 'body'.
     titulos.forEach(titulo => {
@@ -136,6 +140,8 @@ trilho.addEventListener('click', () => {
             imgDesi.style.boxShadow = '#2e2e2e';
         }
     });
+
+
 
     
 });
